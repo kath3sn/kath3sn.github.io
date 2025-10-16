@@ -1,0 +1,29 @@
+html{
+    background-color: rgb(64, 147, 255);
+}
+
+*{
+    border: solid 1px whitesmoke;
+}
+
+main{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.titulo h1{
+    color: white;
+  font-family: "Monsieur La Doulaise", cursive;
+  font-size: 10rem;
+}
+
+.nav a{
+    color: pink;
+}
+
+.nav a{
+    color: pink;
+}
