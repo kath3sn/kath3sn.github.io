@@ -1,5 +1,5 @@
 html{
-    background-color: rgb(64, 147, 255);
+    background-color: rgb(28, 80, 148);
 }
 
 *{
@@ -16,14 +16,16 @@ main{
 
 .titulo h1{
     color: white;
-  font-family: "Monsieur La Doulaise", cursive;
-  font-size: 10rem;
+    font-family: "Anton", sans-serif;
+    font-size: 7rem;
 }
 
 .nav a{
-    color: pink;
+    color: rgb(255, 255, 255);
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;   
 }
 
 .nav a{
-    color: pink;
+    color: rgb(255, 255, 255);
 }
