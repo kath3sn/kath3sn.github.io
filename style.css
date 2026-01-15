@@ -23,11 +23,12 @@ main{
 }
 
 li a{
+    width: 230px;
 	margin-block: 0.5rem;
 	display: inline-block;
 	text-decoration: none;
 	background-color: rgb(245, 190, 38);
-	padding-inline: 3rem;
+	padding-inline: 1rem;
 	padding-block: 0.7rem;
 	border-radius: 30px;
 	border: solid 3px rgb(190, 126, 16);
