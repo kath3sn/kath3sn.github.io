@@ -1,3 +1,15 @@
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Envía el sistema de partículas atrás */
+    display: block;
+    }
+
+    .titulo, .nav {
+    pointer-events: auto;
+}
+
 *{
    font-family: 'Martel', serif;
    font-weight: 800;
@@ -53,18 +65,19 @@ ul{
 }
 
 .Play{
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    font-weight: 900;
+    font-family: "Climate Crisis", sans-serif;
+    font-style: normal;
+    font-weight: 100;
     color:  rgb(245, 190, 38);
-    font-size: 6rem;
+    font-size: 5rem;
    
 }
 
 .titulo h2{
     color: rgb(255, 255, 255);
     font-size: 3rem;
-    font-family: 'Khand', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
+    font-style: italic;
 }
 
 .titulo p{
