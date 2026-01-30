@@ -2,90 +2,127 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1; /* Envía el sistema de partículas atrás */
+    z-index: -1;
     display: block;
-    }
+}
 
-    .titulo, .nav {
+.titulo, .nav {
     pointer-events: auto;
 }
 
-*{
-   font-family: 'Martel', serif;
-   font-weight: 800;
-  /* border: 1px solid red;*/
-   padding: 2px;
-   margin: 0;
-   color: rgb(0, 0, 0); /*cambia el color de todo el texto*/
-   text-align: center;
+* {
+    font-family: 'Martel', serif;
+    font-weight: 800;
+    padding: 2px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
-body{
+body {
     background-color: rgb(0, 0, 0);
 }
 
-main{
-    display: flex; 
+main {
+    display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     min-height: 100vh;
-    gap: 3rem; /*separa el main de los otros elementos como la lista*/
+    gap: 2rem;
 }
 
-li a{
+ul {
+    list-style-type: none;
+}
+
+li a {
+    position: relative;
     width: 230px;
-	margin-block: 0.5rem;
-	display: inline-block;
-	text-decoration: none;
-	background-color: rgb(245, 190, 38);
-	padding-inline: 1rem;
-	padding-block: 0.7rem;
-	border-radius: 30px;
-	border: solid 3px rgb(190, 126, 16);
-	transition: all .3s ease-in-out;
-
+    margin-block: 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(245, 190, 38);
+    padding-inline: 1rem;
+    padding-block: 0.7rem;
+    border-radius: 30px;
+    border: solid 3px rgb(190, 126, 16);
+    transition: all .3s ease-in-out;
 }
 
-li a:hover{
-	background-color: rgb(38, 183, 245);
-	border: solid 3px rgba(21, 60, 255, 0.716);
-	transform: scale(1.3) rotate(2deg);
-
-    /* brillo al pasar el mouse */
-	box-shadow:
-		0 0 10px rgba(38, 183, 245, 0.9),
-		0 0 24px rgba(38, 183, 245, 0.7),
-		0 0 40px rgba(38, 183, 245, 0.6);
+.star {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    font-size: 2rem;
+    color: rgb(255, 47, 206);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgb(255, 59, 255)) drop-shadow(0 0 15px rgba(255, 59, 229, 0.7));
 }
 
-ul{
-	list-style-type: none;
+/* Estrella de la izquierda */
+.star:nth-child(1) { 
+    left: -10px; 
 }
 
-.Play{
+/* Estrella de la derecha */
+.star:nth-child(2) { 
+    right: -10px; 
+}
+
+li a:hover {
+    background-color: rgb(255, 118, 225);
+    border: solid 3px rgba(255, 64, 217, 0.716);
+    transform: scale(1.3) rotate(2deg);
+    box-shadow:
+        0 0 10px rgba(253, 126, 255, 0.9),
+        0 0 24px #ff5bf4b3,
+        0 0 40px rgba(245, 38, 197, 0.6);
+}
+
+li a:hover .star {
+    opacity: 1;
+}
+
+li a:hover .star:nth-child(1) {
+    left: -50px;
+    transform: translateY(-50%) rotate(-15deg);
+}
+
+li a:hover .star:nth-child(2) {
+    right: -50px;
+    transform: translateY(-50%) rotate(15deg);
+}
+
+.Play {
     font-family: "Climate Crisis", sans-serif;
     font-style: normal;
     font-weight: 100;
-    color:  rgb(245, 190, 38);
+    color: rgb(245, 190, 38);
     font-size: 5rem;
-   
 }
 
-.titulo h2{
-    color: rgb(255, 255, 255);
+.titulo h2 {
+    color: rgb(192, 190, 200);
     font-size: 3rem;
     font-family: 'Playfair Display', sans-serif;
     font-style: italic;
 }
 
-.titulo p{
-    color:rgb(255, 255, 255);
+.titulo p {
+    color: rgb(192, 190, 200);
     font-size: 1.1rem;
     padding-inline: 4rem;
     font-family: 'Martel', serif;
     font-weight: 300;
 }
 
-
+p.footer {
+    color: rgb(255, 123, 213);
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 0.1rem;
+    padding-bottom: 1rem;
+}
