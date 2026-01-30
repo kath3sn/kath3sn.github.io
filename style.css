@@ -50,27 +50,7 @@ li a {
     transition: all .3s ease-in-out;
 }
 
-.star {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-    font-size: 2rem;
-    color: rgb(255, 47, 206);
-    transition: all 0.3s ease-in-out;
-    pointer-events: none;
-    filter: drop-shadow(0 0 8px rgb(255, 59, 255)) drop-shadow(0 0 15px rgba(255, 59, 229, 0.7));
-}
 
-/* Estrella de la izquierda */
-.star:nth-child(1) { 
-    left: -10px; 
-}
-
-/* Estrella de la derecha */
-.star:nth-child(2) { 
-    right: -10px; 
-}
 
 li a:hover {
     background-color: rgb(255, 118, 225);
@@ -82,19 +62,6 @@ li a:hover {
         0 0 40px rgba(245, 38, 197, 0.6);
 }
 
-li a:hover .star {
-    opacity: 1;
-}
-
-li a:hover .star:nth-child(1) {
-    left: -50px;
-    transform: translateY(-50%) rotate(-15deg);
-}
-
-li a:hover .star:nth-child(2) {
-    right: -50px;
-    transform: translateY(-50%) rotate(15deg);
-}
 
 .Play {
     font-family: "Climate Crisis", sans-serif;
